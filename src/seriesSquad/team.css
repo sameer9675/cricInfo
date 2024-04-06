@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.team-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 3rem;
+    grid-column-gap: 1rem;
+}
+
+.team-card {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*for horizontal*/
+    justify-content: center;
+    height: 200px;
+    gap: 1rem;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 1px 1px #000;
+    cursor: pointer;
+}
+
+.team-card img {
+    width: 100px;
+    height: auto;
+}
+
+.team-card p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* second Last element */
+.team-card:nth-last-child(-n+2) {
+    grid-row: 3;
+    grid-column: 2;
+    /* Place in the second row */
+}
+
+/* Last element */
+.team-card:nth-last-child(-n+1) {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.playerList-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+
+    img {
+        width: 130px;
+        height: auto;
+    }
+}
+
+.playerList-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.playerDetail {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    img {
+        width: 60px;
+        height: auto;
+    }
+
+    p {
+        font-weight: 600;
+    }
+
+    span {
+        font-size: 0.8rem;
+    }
+}
+
+
+.playerList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.6rem;
+    column-gap: 8rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.horizontalLine {
+    position: absolute;
+    width: 2px;
+    background-color: #7c7676;
+    left: 50%;
+}
+
+.playerDetial-container {
+    padding: 2rem 2rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.playerDetail-header {
+    display: flex;
+    align-items: end;
+    gap: 4.5rem;
+}
+
+.playerDetail-info-container {
+    display: flex;
+    gap: 4rem;
+
+    .playerDetail-personalInfo-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        tr> :first-child {
+            font-weight: 800;
+            padding-right: 3rem;
+        }
+
+        tr td {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .playerDetail-info-header {
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+}
+
+.playerStats-outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .playerStats-inner-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        tr> :first-child {
+            font-weight: 800;
+        }
+    }
+
+    tr td,
+    tr th {
+        padding-right: 1.7rem;
+        padding-bottom: 1rem;
+    }
+}

@@ -1,0 +1,1 @@
+// remove the and condition from all component and implemenet routing
