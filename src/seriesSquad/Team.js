@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CommonUtility from '../CommonUtility.json';
 import axios from 'axios'; // Import Axios like this
 import './team.css'
-import { storeInLS } from '../Utility.js';
+import { storeInLS, getFromLS } from '../Utility.js';
 import PlayerList from './PlayerList.js';
 
 
@@ -19,11 +19,11 @@ function Team({
 
 	const fetchDate = () => {
 
-		const teamDetailsFromLocalStorage = localStorage.getItem(`seriesId:${id}`)
+		const lsKey = `seriesId:${id}`;
+		const teamDetailsFromLocalStorage = getFromLS(lsKey);
 
 		if (teamDetailsFromLocalStorage) {
-			const teamDetail = JSON.parse(teamDetailsFromLocalStorage);
-			setData(teamDetail);
+			setData(teamDetailsFromLocalStorage);
 			return;
 		}
 
@@ -38,8 +38,7 @@ function Team({
 					return;
 				}
 
-				const key = `seriesId:${id}`;
-				storeInLS(key, dataObj.data);
+				storeInLS(lsKey, dataObj.data);
 
 				// Handle success
 				setData(dataObj.data)

@@ -31,7 +31,6 @@ function PlayerList({ teamDetail }) {
 
                 // Handle success
                 setShowPlayerDetail(dataObj.data)
-                console.log('Response:', response);
             })
             .catch(error => {
                 // Handle error
