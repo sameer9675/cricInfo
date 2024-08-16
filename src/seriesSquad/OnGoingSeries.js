@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Team from "./Team";
+import SeriesMatches from '../scorecard/SeriesMatches';
 
 function OnGoingSeries() {
 
@@ -19,7 +20,10 @@ function OnGoingSeries() {
                         IPL
                     </button>
                 ) : (
-                    <Team
+                    // <Team
+                    //     id='76ae85e2-88e5-4e99-83e4-5f352108aebc'
+                    // />
+                    <SeriesMatches
                         id='76ae85e2-88e5-4e99-83e4-5f352108aebc'
                     />
                 )
